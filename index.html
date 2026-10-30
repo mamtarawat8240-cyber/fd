@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="FD Talk Show - Explore fashion styling reels, college outfits, casual looks, party wear, and styling tips.">
+
+    <title>FD Talk Show - Styling Reels Series</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        section {
+            scroll-margin-top: 80px;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .reel-container,
+        .tips-container,
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .reel-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        input,
+        textarea,
+        button {
+            font: inherit;
+        }
+
+        input,
+        textarea {
+            box-sizing: border-box;
+            max-width: 100%;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        @media (max-width: 700px) {
+            .reel-container,
+            .tips-container,
+            .team-container {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .reel-card img {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Backend Connection Test -->
+    <div class="backend-bar">
+        <button type="button" id="backendBtn">
+            Test Backend Connection
+        </button>
+
+        <p id="backendStatus" role="status" aria-live="polite">
+            Backend status will appear here.
+        </p>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <h1>FD Talk Show</h1>
+        <p>Styling Reels Series</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#reels">Styling Reels</a>
+        <a href="#tips">Styling Tips</a>
+        <a href="#survey">Survey Results</a>
+        <a href="#contact">Contact</a>
+        <a href="#team">Team</a>
+        <a href="login.html">Login</a>
+        <a href="Signup.html">Sign Up</a>
+    </nav>
+
+    <main>
+
+        <!-- Home -->
+        <section id="home" class="hero">
+            <p class="eyebrow">STYLE • CONFIDENCE • CREATIVITY</p>
+
+            <h2>Welcome to FD Talk Show</h2>
+
+            <p>
+                Discover fashion, styling ideas and creative outfit
+                inspiration through our styling reels.
+            </p>
+
+            <a class="button-link" href="#reels">
+                Explore Styling
+            </a>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="section">
+            <h2>About FD Talk Show</h2>
+
+            <p>
+                FD Talk Show is a fashion styling project that presents
+                creative styling ideas through short reels and fashion tips.
+                Explore college outfits, casual looks and party wear.
+            </p>
+        </section>
+
+        <!-- Styling Reels -->
+        <section id="reels" class="section">
+            <h2>Styling Reels</h2>
+
+            <p class="section-intro">
+                Explore outfit ideas for different occasions.
+            </p>
+
+            <div class="reel-container">
+
+                <article class="reel-card">
+                    <img
+                        src="./images/college.jpg"
+                        alt="College outfit inspiration"
+                        loading="lazy"
+                    >
+
+                    <div class="card-content">
+                        <h3>College Outfit</h3>
+                        <p>Simple and stylish college outfit ideas.</p>
+                    </div>
+                </article>
+
+                <article class="reel-card">
+                    <img
+                        src="./images/casual.jpg"
+                        alt="Casual styling inspiration"
+                        loading="lazy"
+                    >
+
+                    <div class="card-content">
+                        <h3>Casual Styling</h3>
+                        <p>Easy casual looks for everyday wear.</p>
+                    </div>
+                </article>
+
+                <article class="reel-card">
+                    <img
+                        src="./images/party.jpg"
+                        alt="Party look inspiration"
+                        loading="lazy"
+                    >
+
+                    <div class="card-content">
+                        <h3>Party Look</h3>
+                        <p>Trendy outfit ideas for party occasions.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Styling Tips -->
+        <section id="tips" class="section">
+            <h2>Styling Tips</h2>
+
+            <div class="tips-container">
+
+                <article class="tip-card">
+                    <span class="tip-icon" aria-hidden="true">🎨</span>
+                    <h3>Choose the Right Colours</h3>
+
+                    <p>
+                        Choose colours that complement each other
+                        and create a balanced look.
+                    </p>
+                </article>
+
+                <article class="tip-card">
+                    <span class="tip-icon" aria-hidden="true">👗</span>
+                    <h3>Dress for the Occasion</h3>
+
+                    <p>
+                        Wear outfits according to the event,
+                        place and occasion.
+                    </p>
+                </article>
+
+                <article class="tip-card">
+                    <span class="tip-icon" aria-hidden="true">✨</span>
+                    <h3>Use Accessories</h3>
+
+                    <p>
+                        Add simple accessories to complete your look.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Survey Results -->
+        <section id="survey" class="section">
+            <h2>Survey Results &amp; Student Insights</h2>
+            <p class="section-intro">
+                Analysis of <strong>31 real student responses</strong> collected for the FD Talk Show minor project to design data-driven styling reels and outfit inspiration.
+            </p>
+
+            <!-- Key Highlights Stat Cards -->
+            <div class="survey-summary-grid">
+                <article class="survey-stat-card">
+                    <div class="survey-stat-number">31</div>
+                    <div class="survey-stat-label">Total Responses</div>
+                </article>
+                <article class="survey-stat-card">
+                    <div class="survey-stat-number">54.8%</div>
+                    <div class="survey-stat-label">Prefer Jeans + Top for College</div>
+                </article>
+                <article class="survey-stat-card">
+                    <div class="survey-stat-number">58.1%</div>
+                    <div class="survey-stat-label">Prioritize Comfort in Casuals</div>
+                </article>
+                <article class="survey-stat-card">
+                    <div class="survey-stat-number">74.2%</div>
+                    <div class="survey-stat-label">Inspiration from Pinterest &amp; Insta</div>
+                </article>
+            </div>
+
+            <!-- Question Charts Grid -->
+            <div class="survey-charts-grid" id="surveyChartsContainer">
+                <article class="survey-chart-card">
+                    <h3><span aria-hidden="true">👥</span> 1.What is your gender?</h3>
+                    <div class="survey-bar-group">
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Female</span>
+                                <span class="survey-bar-val">21 votes (67.7%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 67.7%;"></div>
+                            </div>
+                        </div>
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Male</span>
+                                <span class="survey-bar-val">10 votes (32.3%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 32.3%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="survey-chart-card">
+                    <h3><span aria-hidden="true">🎓</span> 2. What type of outfit do you prefer for college?</h3>
+                    <div class="survey-bar-group">
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Jeans + T-shirt/Top</span>
+                                <span class="survey-bar-val">17 votes (54.8%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 54.8%;"></div>
+                            </div>
+                        </div>
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Oversized T-shirt + Jeans</span>
+                                <span class="survey-bar-val">8 votes (25.8%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 25.8%;"></div>
+                            </div>
+                        </div>
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Kurti + Jeans/Palazzo</span>
+                                <span class="survey-bar-val">4 votes (12.9%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 12.9%;"></div>
+                            </div>
+                        </div>
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Other</span>
+                                <span class="survey-bar-val">2 votes (6.5%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 6.5%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="survey-chart-card">
+                    <h3><span aria-hidden="true">👕</span> 3. What do you prefer most in casual wear?</h3>
+                    <div class="survey-bar-group">
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Comfortable outfits</span>
+                                <span class="survey-bar-val">18 votes (58.1%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 58.1%;"></div>
+                            </div>
+                        </div>
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Trendy outfits</span>
+                                <span class="survey-bar-val">8 votes (25.8%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 25.8%;"></div>
+                            </div>
+                        </div>
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Streetwear</span>
+                                <span class="survey-bar-val">3 votes (9.7%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 9.7%;"></div>
+                            </div>
+                        </div>
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Simple/Minimal outfits</span>
+                                <span class="survey-bar-val">2 votes (6.5%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 6.5%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="survey-chart-card">
+                    <h3><span aria-hidden="true">✨</span> 4. What type of party wear do you prefer?</h3>
+                    <div class="survey-bar-group">
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Stylish Top/Shirt + Jeans</span>
+                                <span class="survey-bar-val">17 votes (54.8%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 54.8%;"></div>
+                            </div>
+                        </div>
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Western Dress</span>
+                                <span class="survey-bar-val">9 votes (29%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 29%;"></div>
+                            </div>
+                        </div>
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Ethnic Wear</span>
+                                <span class="survey-bar-val">4 votes (12.9%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 12.9%;"></div>
+                            </div>
+                        </div>
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Indo-western</span>
+                                <span class="survey-bar-val"> (3.2%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 3.2%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="survey-chart-card">
+                    <h3><span aria-hidden="true">⭐</span> 5.What is most important when choosing an outfit?</h3>
+                    <div class="survey-bar-group">
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Comfort</span>
+                                <span class="survey-bar-val">17 votes (54.8%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 54.8%;"></div>
+                            </div>
+                        </div>
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Looks</span>
+                                <span class="survey-bar-val">11 votes (35.5%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 35.5%;"></div>
+                            </div>
+                        </div>
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Quality</span>
+                                <span class="survey-bar-val">2 votes (6.5%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 6.5%;"></div>
+                            </div>
+                        </div>
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Latest Trends</span>
+                                <span class="survey-bar-val"> (3.2%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 3.2%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="survey-chart-card">
+                    <h3><span aria-hidden="true">📱</span> 6.  Where do you usually get fashion inspiration from?</h3>
+                    <div class="survey-bar-group">
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Pinterest</span>
+                                <span class="survey-bar-val">12 votes (38.7%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 38.7%;"></div>
+                            </div>
+                        </div>
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Instagram</span>
+                                <span class="survey-bar-val">11 votes (35.5%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 35.5%;"></div>
+                            </div>
+                        </div>
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Friends</span>
+                                <span class="survey-bar-val">4 votes (12.9%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 12.9%;"></div>
+                            </div>
+                        </div>
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Fashion Websites</span>
+                                <span class="survey-bar-val">4 votes (12.9%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 12.9%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="survey-chart-card">
+                    <h3><span aria-hidden="true">⏱️</span> 7. How often do you watch fashion/styling reels?</h3>
+                    <div class="survey-bar-group">
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Sometimes</span>
+                                <span class="survey-bar-val">16 votes (51.6%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 51.6%;"></div>
+                            </div>
+                        </div>
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Daily</span>
+                                <span class="survey-bar-val">6 votes (19.4%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 19.4%;"></div>
+                            </div>
+                        </div>
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Rarely</span>
+                                <span class="survey-bar-val">5 votes (16.1%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 16.1%;"></div>
+                            </div>
+                        </div>
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Never</span>
+                                <span class="survey-bar-val">4 votes (12.9%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 12.9%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="survey-chart-card">
+                    <h3><span aria-hidden="true">🎬</span> 8. Which type of styling content do you like most?</h3>
+                    <div class="survey-bar-group">
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Casual Styling</span>
+                                <span class="survey-bar-val">12 votes (38.7%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 38.7%;"></div>
+                            </div>
+                        </div>
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">College Outfit Ideas</span>
+                                <span class="survey-bar-val">10 votes (32.3%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 32.3%;"></div>
+                            </div>
+                        </div>
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Styling Tips</span>
+                                <span class="survey-bar-val">5 votes (16.1%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 16.1%;"></div>
+                            </div>
+                        </div>
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Outfit Transition Reels</span>
+                                <span class="survey-bar-val">3 votes (9.7%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 9.7%;"></div>
+                            </div>
+                        </div>
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Party Looks</span>
+                                <span class="survey-bar-val"> (3.2%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 3.2%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="survey-chart-card">
+                    <h3><span aria-hidden="true">💡</span> 9. What would you like to see on a fashion/styling website?</h3>
+                    <div class="survey-bar-group">
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Outfit Ideas</span>
+                                <span class="survey-bar-val">13 votes (41.9%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 41.9%;"></div>
+                            </div>
+                        </div>
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Styling Tips</span>
+                                <span class="survey-bar-val">5 votes (16.1%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 16.1%;"></div>
+                            </div>
+                        </div>
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Styling Reels</span>
+                                <span class="survey-bar-val">5 votes (16.1%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 16.1%;"></div>
+                            </div>
+                        </div>
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Budget-Friendly Looks</span>
+                                <span class="survey-bar-val">5 votes (16.1%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 16.1%;"></div>
+                            </div>
+                        </div>
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Trending Fashion</span>
+                                <span class="survey-bar-val">3 votes (9.7%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 9.7%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="survey-chart-card">
+                    <h3><span aria-hidden="true">🎯</span> 10. What type of fashion content helps you choose an outfit?</h3>
+                    <div class="survey-bar-group">
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Complete outfit inspiration</span>
+                                <span class="survey-bar-val">12 votes (38.7%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 38.7%;"></div>
+                            </div>
+                        </div>
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Colour combinations</span>
+                                <span class="survey-bar-val">10 votes (32.3%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 32.3%;"></div>
+                            </div>
+                        </div>
+                        <div class="survey-bar-item">
+                            <div class="survey-bar-header">
+                                <span class="survey-bar-label">Mix & match ideas</span>
+                                <span class="survey-bar-val">9 votes (29%)</span>
+                            </div>
+                            <div class="survey-bar-track" aria-hidden="true">
+                                <div class="survey-bar-fill" style="width: 29%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+
+        <!-- Contact -->
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+
+            <p class="section-intro">
+                Have any questions or suggestions? Send us a message.
+            </p>
+
+            <form id="contactForm">
+
+                <label for="name">Your Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    autocomplete="name"
+                    required
+                >
+
+                <label for="email">Your Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    autocomplete="email"
+                    required
+                >
+
+                <label for="message">Your Message</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Write your message"
+                    rows="5"
+                    required
+                ></textarea>
+
+                <button type="submit" id="sendBtn">
+                    Send Message
+                </button>
+
+                <p id="contactStatus" role="status" aria-live="polite"></p>
+
+            </form>
+        </section>
+
+        <!-- Team -->
+        <section id="team" class="section">
+            <h2>Our Team</h2>
+
+            <div class="team-container">
+
+                <article class="team-card">
+                    <div class="team-avatar" aria-hidden="true">M</div>
+                    <h3>Mamta Rawat</h3>
+                    <p>BCA Student</p>
+                    <p>Website Design &amp; Development</p>
+                </article>
+
+                <article class="team-card">
+                    <div class="team-avatar" aria-hidden="true">T2</div>
+                    <h3>Team Member 2</h3>
+                    <p>BBA Student</p>
+                    <p>Data Collection &amp; Content</p>
+                </article>
+
+                <article class="team-card">
+                    <div class="team-avatar" aria-hidden="true">T3</div>
+                    <h3>Team Member 3</h3>
+                    <p>BBA Student</p>
+                    <p>Data Collection &amp; Content</p>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 FD Talk Show - Styling Reels Series</p>
+        <a href="#home">Back to Top ↑</a>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./script.js" defer></script>
+
+</body>
+</html>

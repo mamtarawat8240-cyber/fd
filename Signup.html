@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - FD Talk Show</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="login-container">
+
+        <h1>FD Talk Show</h1>
+        <p>Join Our Fashion Community! 💗</p>
+        <h2>Create Account</h2>
+
+        <form id="signupForm">
+
+            <input type="text" id="name"
+                   placeholder="Full Name" required>
+
+            <input type="email" id="email"
+                   placeholder="Email Address" required>
+
+            <input type="password" id="password"
+                   placeholder="Create Password"
+                   minlength="8" required>
+
+            <input type="password" id="confirmPassword"
+                   placeholder="Confirm Password"
+                   minlength="8" required>
+
+            <button type="submit">Sign Up</button>
+
+        </form>
+
+        <p id="message"></p>
+
+        <p>Already have an account?
+            <a href="login.html">Login</a>
+        </p>
+
+        <a href="index.html">Back to Home</a>
+
+    </div>
+
+    <script>
+document.getElementById("signupForm")
+.addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
+    const confirmPassword =
+        document.getElementById("confirmPassword").value;
+
+    const message = document.getElementById("message");
+
+    if (password !== confirmPassword) {
+        message.textContent = "Passwords do not match!";
+        return;
+    }
+
+    message.textContent = "Creating account...";
+
+    try {
+        const response = await fetch(
+            "http://localhost:3000/api/signup",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    name,
+                    email,
+                    password
+                })
+            }
+        );
+
+        const result = await response.json();
+        message.textContent = result.message;
+
+        if (response.ok) {
+            document.getElementById("signupForm").reset();
+            message.textContent = result.message + " Redirecting to login...";
+            setTimeout(function() {
+                window.location.href = "login.html";
+            }, 1200);
+        }
+
+    } catch (error) {
+        message.textContent =
+            "Cannot connect to server. Please start the backend.";
+    }
+});
+</script>
+</body>
+</html>
